@@ -1,7 +1,7 @@
 {
-  "name": "wilddream-mobile",
+  "name": "car",
   "version": "1.0.0",
-  "description": "wilddream-mobile Project",
+  "description": "car Project",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress --colors --mode development",
     "dev": "cross-env NODE_ENV=development webpack -p --progress --colors --mode development",
@@ -10,16 +10,8 @@
     "fix": "eslint app/ --fix",
     "bundle-analyze": "webpack --profile --json > bundle-info.json && webpack-bundle-analyzer ./bundle-info.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FurCoder/wilddream-mobile.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/FurCoder/wilddream-mobile/issues"
-  },
-  "homepage": "https://github.com/FurCoder/wilddream-mobile#readme",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
