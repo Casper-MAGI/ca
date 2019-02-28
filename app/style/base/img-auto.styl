@@ -1,0 +1,9 @@
+png-auto-bg($url, $add = "")
+   background-image: url($url + "@2x.png") $add
+   @media(-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+     background-image: url($url + "@3x.png") $add
+
+jpg-auto-bg($url, $add = '')
+   background-image: url($url + "@2x.jpg") $add
+   @media(-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+     background-image: url($url + "@3x.jpg") $add

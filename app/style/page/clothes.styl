@@ -1,0 +1,83 @@
+.clothes-page
+    height 100%
+    box-sizing border-box
+    background url("~@/image/page-bg@3x.png") repeat center center / auto 100%
+    background-color: #f5bdc2
+    position relative
+    display flex
+    flex-flow row nowrap
+    justify-content: center
+    padding-top 0.32rem
+
+    .colthes-frame
+        width: 9.68rem
+        height 13.68rem
+        background url("~@/image/clothes-frame@3x.png") no-repeat center center / auto 100%
+        display flex
+        flex-flow column nowrap
+        justify-content space-between
+        align-items center
+        padding-top 0.0533rem
+        padding-right 5px
+        padding-bottom 0.56rem
+        @media (-webkit-min-device-pixel-ratio 3), (min-device-pixel-ratio 3)
+            padding-right 7px
+        
+        .frame-container
+            position relative
+            width 9.08rem
+            height 9.2933rem
+            position relative
+        
+        .card
+            position absolute
+            left 0
+            top 0
+            width 9.08rem
+            height 9.2933rem
+        
+        .type-selecter-list
+            width: 100%
+            box-sizing border-box
+            display: flex
+            flex-flow row nowrap
+            justify-content: space-around
+            padding: 0 0.5rem
+            align-items center
+
+            .selecter-button-active
+                height 0.6rem
+                border: 2px solid #000
+                width: 1.5rem
+                line-height: 0.6rem
+                text-align: center
+                background: #f0d758
+            .selecter-button
+                height 0.6rem
+                border: 2px solid transparent
+                width: 1.5rem
+                line-height: 0.6rem
+                text-align: center
+        
+        .item-selecter-container
+            height 2.65rem
+            width 9rem
+            box-sizing: border-box
+            overflow-x scroll
+
+            .item-selecter-list
+                display flex
+                flex-flow: row nowrap
+
+            .selecter-button
+                height 2.65rem
+                width 1.626rem
+                background: #0084ff
+                flex-shrink 0
+                margin-right: 0.373rem
+
+                &:last-child
+                    margin-right: 0
+
+            
+        

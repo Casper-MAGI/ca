@@ -1,0 +1,10 @@
+node_modules
+
+bundle-info.json
+
+.DS_Store
+
+yarn-error.log
+
+public/js
+public/img
