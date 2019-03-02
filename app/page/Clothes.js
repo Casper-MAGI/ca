@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import qs from 'qs'
 
 const carList = [
   { name: '1', id: '1', imgUri: require('@/image/car-1@3x.png')},
@@ -31,6 +33,9 @@ const typeList = [
 ]
 
 export default class Start extends Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  }
   state = {
     carIndex: 0,
     backCarIndex: 0,
@@ -87,8 +92,9 @@ export default class Start extends Component {
     const { selecterType } = this.state
     return <div className="type-selecter-list">
       {
-        typeList.map(item => 
+        typeList.map(item =>
           <div
+            key={item.label}
             onClick={this.changeType(item.type)}
             className={item.type === selecterType ? "selecter-button-active" : "selecter-button"}
           >{item.label}</div>
@@ -117,7 +123,6 @@ export default class Start extends Component {
       )
     }
     if (selecterType === 'head') {
-      console.log('head')
       list = headList.map((item, index) => 
         <div
           key={item.id}
@@ -159,6 +164,20 @@ export default class Start extends Component {
       </div>
     </div>
   }
+  jump = () => {
+    const {
+      carIndex,
+      backCarIndex,
+      headIndex,
+      clotheIndex,
+    } = this.state
+    this.context.router.history.push('/share?' + qs.stringify({
+      carIndex,
+      backCarIndex,
+      headIndex,
+      clotheIndex,
+    }))
+  }
   render() {
     return <div className='clothes-page'>
       <div className="colthes-frame">
@@ -171,6 +190,10 @@ export default class Start extends Component {
         { this.renderTypeSelecter() }
         { this.renderItemSelecter() }
       </div>
+      <div
+        onClick={this.jump}
+        className="start-page-button"
+      ></div>
     </div>
   }
 }

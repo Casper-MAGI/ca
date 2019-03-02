@@ -5,9 +5,10 @@
     background-color: #f5bdc2
     position relative
     display flex
-    flex-flow row nowrap
-    justify-content: center
-    padding-top 0.32rem
+    flex-flow column nowrap
+    justify-content: space-around
+    align-items: center
+    padding: (30/75)rem 0 (20/75)rem 0
 
     .colthes-frame
         width: 9.68rem
@@ -46,6 +47,7 @@
             align-items center
 
             .selecter-button-active
+                font-size: (26/75)rem
                 height 0.6rem
                 border: 2px solid #000
                 width: 1.5rem
@@ -53,6 +55,7 @@
                 text-align: center
                 background: #f0d758
             .selecter-button
+                font-size: (26/75)rem
                 height 0.6rem
                 border: 2px solid transparent
                 width: 1.5rem
@@ -78,6 +81,13 @@
 
                 &:last-child
                     margin-right: 0
+    .start-page-button
+        background: url("~@/image/start-page-button@3x.png")
+        background-repeat no-repeat
+        background-size contain
+        background-position center center
+        width 8.6533rem
+        height 2.34rem
 
             
         

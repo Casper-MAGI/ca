@@ -4,9 +4,9 @@
     background-color: #f5bdc2
     position relative
     display flex
-    flex-flow row nowrap
-    justify-content: center
-    padding-top 0.32rem
+    flex-flow column nowrap
+    justify-content: space-around
+    align-items: center
 
     .share-frame
         width: 9.68rem
@@ -21,4 +21,58 @@
             position absolute
             left 0.23rem
             top 0.0533rem
+
+        .frame-container
+            position relative
+            width 9.08rem
+            height 9.2933rem
+            position relative
+
+        .card
+            position absolute
+            left 0
+            top 0
+            width 9.08rem
+            height 9.2933rem
+        
+        .type-label
+            position absolute
+            font-size: (26/75)rem
+            left: (62/64)rem
+            top: (611/64)rem
+            width: (144/64)rem
+            height: (44/64)rem
+            line-height: (44/64)rem
+            text-align: center
+            font-weight: 500
+        .type-desc
+            position absolute
+            font-size: (26/75)rem
+            left: (48/75)rem
+            top: (792/75)rem
+            width: (626/75)rem
+            height: (44/64)rem
+            line-height: (44/64)rem
+            text-align: center
+            font-weight: 500
+    .button-line
+        display flex
+        height (180/75)rem
+        flex-flow: row nowrap
+        justify-content: space-between
+        align-items: center
+        
+        
+        .save
+            margin-left (155/75)rem
+            height (164/75)rem
+            width (156/75)rem
+            background url("~@/image/save.png") no-repeat center center / auto 100%
+
+        .prev
+            height (138/75)rem
+            width (155/75)rem
+            background url("~@/image/prev.png") no-repeat center center / auto 100%
+            
+
             
